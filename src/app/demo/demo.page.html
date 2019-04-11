@@ -4,12 +4,23 @@
             <ion-menu-button></ion-menu-button>
         </ion-buttons>
         <ion-title>
-            Demo
+            Lista de Usuarios
         </ion-title>
     </ion-toolbar>
 </ion-header>
 
 <ion-content>
+
+
+    <ion-list>
+        <ion-item *ngFor="let item of user">
+            <ion-icon name="person" slot="start" color="warning"></ion-icon>
+            {{item.name}}
+            <ion-avatar slot="end">
+                <img src="{{item.picture}}">
+            </ion-avatar>
+        </ion-item>
+    </ion-list>
 
     <!-- fab placed to the top and end and on the top edge of the content overlapping header -->
     <ion-fab vertical="top" horizontal="end" edge slot="fixed">
